@@ -1,11 +1,9 @@
 북고 앱 프로젝트
 =======
 > * ### App
->   * [MainPage](url)
->   * [MainPage2](url)
+>   * [MainPage](url) (Not Supported)
+>   * [MainPage2](url) (Not Supported)
 
 > * ### Web
->   * [MainPage](url)
->   * [MainPage2](url)
-
-
+>   * [MainPage](url) (Not Supported)
+>   * [MainPage2](url) (Not Supported)
