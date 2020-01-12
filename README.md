@@ -1,7 +1,11 @@
-자마린 프로젝트
+북고 앱 프로젝트
 =======
-> * ### 공용 코드 부분
->   * [MainPage](https://github.com/lHealMel/Xaml_project/blob/master/Xam_pro_1/Xam_pro_1/MainPage.xaml)
->   * [MainPage2](MainPage.xaml.cs)
+> * ### App
+>   * [MainPage](url)
+>   * [MainPage2](url)
+
+> * ### Web
+>   * [MainPage](url)
+>   * [MainPage2](url)
 
 
