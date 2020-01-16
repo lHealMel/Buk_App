@@ -1,5 +1,7 @@
-북고 앱 프로젝트
-=======
+# 북고 앱 프로젝트 
+##### (UTF-8로 인코딩 할 것)
+
+
 > * ### App
 >   * [~~MainCode~~](url) (Not Supported)
 >   * [~~MainCode2~~](url) (Not Supported)
