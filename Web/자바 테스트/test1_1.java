@@ -1,3 +1,5 @@
+// 서버부분
+
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.*;
@@ -26,6 +28,7 @@ public class test1_1 {
 				outstream.writeObject(obj + "fromserver.");
 				outstream.flush();
 				sock.close();
+				aServerSocket.close();
 			}
 
 		} catch (Exception ex) {
@@ -33,5 +36,5 @@ public class test1_1 {
 		}
 
 	}
-
+   
 }

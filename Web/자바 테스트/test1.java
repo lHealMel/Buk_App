@@ -1,12 +1,14 @@
+//클라이언트
+
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.*;
 
 public class test1 {
-
+	
 	public static void main(String[] args) {
 		try {
-			int portNum = 5001;
+			int portNum = 5001; //
 
 			Socket sock = new Socket("localhost", portNum);
 
