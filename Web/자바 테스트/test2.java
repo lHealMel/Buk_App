@@ -4,17 +4,17 @@ import java.util.*;
 public class test2 {
 	public static void main(String[] args) {
 
-		Random random = new Random();
+		Random rd = new Random();
 		Scanner scan = new Scanner(System.in);
-		int less = random.nextInt(9);
-		int sel = random.nextInt(9);
+		int less = rd.nextInt(9);
+		int sel = rd.nextInt(9);
 		int i = 0;
-		// 0.01ÀÇ È®·ü
+		// 0.01ì˜ í™•ë¥ 
 			while (less != sel) {
 				i += 1;
-				System.out.println("²Î");
-				int less1 = random.nextInt(9);
-				int sel1 = random.nextInt(9);
+				System.out.println("ê½");
+				int less1 = rd.nextInt(9);
+				int sel1 = rd.nextInt(9);
 				less = less1;
 				sel = sel1;
 			    try {
@@ -27,8 +27,8 @@ public class test2 {
 			    
 				if (less == sel) {
 					i += 1;
-					System.out.println("´çÃ·");
-					System.out.println("ÃÑ ½ÃµµÇÑ È½¼ö:" + i);
+					System.out.println("ë‹¹ì²¨");
+					System.out.println("ì´ ì‹œë„í•œ íšŸìˆ˜:" + i);
                     }
 		}
 
