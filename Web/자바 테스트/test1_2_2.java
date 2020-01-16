@@ -1,28 +1,30 @@
+//íŒŒì¼ ì½ê¸°
+
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
 public class test1_2_2 {
 	public static void main(String[] args) throws IOException {
+
 		try {
-			// ¹ÙÀÌÆ® ´ÜÀ§·Î ÆÄÀÏÀĞ±â
-			String filePath = "C:\\Users\\mtn20\\Desktop\\test\\test.txt"; // ´ë»ó ÆÄÀÏ
-			FileInputStream fileStream = null; // ÆÄÀÏ ½ºÆ®¸²
+			// ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ íŒŒì¼ì½ê¸°
+			String filePath = "D:/Eclipse/Java/Output.txt"; // ëŒ€ìƒ íŒŒì¼
+			FileInputStream fileStream = null; // íŒŒì¼ ìŠ¤íŠ¸ë¦¼
 
-			fileStream = new FileInputStream(filePath);// ÆÄÀÏ ½ºÆ®¸² »ı¼º
+			fileStream = new FileInputStream(filePath);// íŒŒì¼ ìŠ¤íŠ¸ë¦¼ ìƒì„±
 
-			// ¹öÆÛ ¼±¾ğ
-			byte[] readBuffer = new byte[fileStream.available()];
+			byte[] readBuffer = new byte[fileStream.available()];// ë²„í¼ ì„ ì–¸
+
 			while (fileStream.read(readBuffer) != -1) {
 			}
 
-			System.out.println(new String(readBuffer)); // Ãâ·Â
+			System.out.println(new String(readBuffer)); // ì¶œë ¥
 
-			fileStream.close(); // ½ºÆ®¸² ´İ±â
+			fileStream.close(); // ìŠ¤íŠ¸ë¦¼ ë‹«ê¸°
 
 		} catch (Exception e) {
 			e.getStackTrace();
 		}
 	}
-
 }

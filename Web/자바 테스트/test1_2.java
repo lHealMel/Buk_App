@@ -1,4 +1,4 @@
-//ÆÄÀÏ ÀÔ Ãâ·Â
+//íŒŒì¼ ì…ë ¥
 
 import java.io.*;
 import java.util.Scanner;
@@ -8,17 +8,12 @@ public class test1_2 {
 		test1_2 myTest = new test1_2();
 		String adsf = "qwer1234";
 
-		try {
-			myTest.write("fdas" + adsf);
-			myTest.write("testinnnnng");
-
-		} catch (Exception ex) {
-			ex.getStackTrace();
-		}
+		myTest.writer("testinnnnng");
+		myTest.writer("fdas" + adsf);
 
 	}
-	
-    //¸Ç Ã³À½¿¡ °¡Áö°í ¿Â ¿¹Á¦
+
+	// ì²˜ìŒ ì°¸ê³ í•œ ì˜ˆì œ
 	public static void test1(String[] args) throws IOException {
 		Scanner scan = new Scanner(System.in);
 
@@ -27,56 +22,47 @@ public class test1_2 {
 		BufferedOutputStream bs = null;
 		try {
 			bs = new BufferedOutputStream(new FileOutputStream("C:\\Users\\mtn20\\Desktop\\test\\test.txt"));
-			String str = "¿À´Ã ³¯¾¾´Â ¾ÆÁÖ ÁÁ½À´Ï´Ù.\r\n";
-			bs.write(str.getBytes()); // ByteÇüÀ¸·Î¸¸ ³ÖÀ» ¼ö ÀÖÀ½
+			String str = "Hello, World!";
+			bs.write(str.getBytes()); // Byteë¡œë§Œ ë°›ì•„ ë“¤ì¼ ìˆ˜ ìˆë‹¤.
 			bs.write(i.getBytes());
 
 		} catch (Exception ex) {
 			ex.getStackTrace();
 			// TODO: handle exception
 		} finally {
-			bs.close(); // ¹İµå½Ã ´İ´Â´Ù.
+			bs.close(); // ê¼­ ë‹«ëŠ”ë‹¤.
 		}
 		scan.close();
 	}
 
-	// ³»¿ë Ãß°¡ ¸Ş¼Òµå
+	// íŒŒì¼ ì¶”ê°€í•´ì„œ ì“°ê¸°
 	public void writer(String words_writer) throws IOException {
-		Scanner scan = new Scanner(System.in);
 
-		FileWriter fw = new FileWriter("C:\\Users\\mtn20\\Desktop\\test\\test.txt");
+		FileWriter fw = new FileWriter("C:\\Users\\mtn20\\Desktop\\test\\test.txt", true);
 
-		try {
-			words_writer = words_writer + "\r\n";
-			fw.write(words_writer);// ByteÇüÀ¸·Î¸¸ ³ÖÀ» ¼ö ÀÖÀ½
-		} catch (Exception ex) {
-			ex.getStackTrace();
-			// TODO: handle exception
-		} finally {
-			fw.close(); // ¹İµå½Ã ´İ´Â´Ù.
-		}
-		scan.close();
+		words_writer = words_writer + "\r\n";
+		fw.write(words_writer);
+		fw.close(); // ê¼­ ë‹«ëŠ”ë‹¤.
+
 	}
 
-	// µ¤¾î¾²±â ¸Ş¼Òµå
+	// íŒŒì¼ ë®ì–´ì“°ê¸°
 	public void write(String words) throws IOException {
 
 		BufferedOutputStream bs = null;
 		try {
-			words = words + "\r\n";
 			bs = new BufferedOutputStream(new FileOutputStream("C:\\Users\\mtn20\\Desktop\\test\\test.txt"));
-			bs.write(words.getBytes());// ByteÇüÀ¸·Î¸¸ ³ÖÀ» ¼ö ÀÖÀ½
-
+			bs.write(words.getBytes()); // Byteë¡œë§Œ ë°›ì•„ ë“¤ì¼ ìˆ˜ ìˆë‹¤.
 		} catch (Exception ex) {
 			ex.getStackTrace();
 			// TODO: handle exception
 		} finally {
-			bs.close(); // ¹İµå½Ã ´İ´Â´Ù.
+			bs.close(); // ê¼­ ë‹«ëŠ”ë‹¤.
 		}
 
 	}
 
-	// µ¤¾î¾²±â (scanÀÌ¿ë) ¸Ş¼Òµå
+	// íŒŒì¼ ë®ì–´ì“°ê¸°(scanì‚¬ìš©)
 	public void write_scan() throws IOException {
 		Scanner scan = new Scanner(System.in);
 		String words_scan = scan.next();
@@ -84,16 +70,17 @@ public class test1_2 {
 		BufferedOutputStream bs = null;
 		try {
 			bs = new BufferedOutputStream(new FileOutputStream("C:\\Users\\mtn20\\Desktop\\test\\test.txt"));
-			String str = "¿À´Ã ³¯¾¾´Â ¾ÆÁÖ ÁÁ½À´Ï´Ù.\r\n";
-			bs.write(str.getBytes()); // ByteÇüÀ¸·Î¸¸ ³ÖÀ» ¼ö ÀÖÀ½
+			String str = "Hello, World!";
+			bs.write(str.getBytes()); // Byteë¡œë§Œ ë°›ì•„ ë“¤ì¼ ìˆ˜ ìˆë‹¤.
 			bs.write(words_scan.getBytes());
 
 		} catch (Exception ex) {
 			ex.getStackTrace();
 			// TODO: handle exception
 		} finally {
-			bs.close(); // ¹İµå½Ã ´İ´Â´Ù.
+			bs.close(); // ê¼­ ë‹«ëŠ”ë‹¤.
 		}
 		scan.close();
 	}
+	
 }
